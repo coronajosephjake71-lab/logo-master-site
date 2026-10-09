@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b12">
+  <meta name="description" content="Logo Master creates bold, custom logos for your brand, team, or next big idea.">
+  <title>Logo Master — Want a Cool Logo? We Got You.</title>
+  <style>
+    :root{--bg:#070b12;--panel:#0d1422;--panel2:#101b2c;--blue:#21b7ff;--cyan:#68e0ff;--text:#f4f8ff;--muted:#a8b7ca;--line:#1b314a;--radius:20px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 85% 0%,#09274a 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:#070b12e8;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.04em}
+    .mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,var(--blue),#1263ff);box-shadow:0 0 24px #21b7ff44;color:#00111e;font-weight:1000;font-size:1.1rem}
+    .brand span:last-child{font-size:1.02rem}
+    .links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.92rem}
+    .links a:hover{color:var(--cyan)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid #21b7ff88;background:linear-gradient(120deg,#20baff,#1672ff);color:#00101d;font-weight:850;cursor:pointer;box-shadow:0 8px 28px #087dff25;transition:transform .18s,filter .18s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .btn.secondary{background:#101b2c;color:var(--text);border-color:#27415e;box-shadow:none}
+    .hero{padding:94px 0 76px;display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--cyan);border:1px solid #21b7ff55;background:#0a1c30;padding:7px 12px;border-radius:999px;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.99;letter-spacing:-.055em;margin:22px 0}
+    h1 em{font-style:normal;color:var(--blue);text-shadow:0 0 35px #21b7ff42}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:570px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    .small-note{font-size:.86rem;color:#7f92aa}
+    .hero-art{position:relative;min-height:350px;display:grid;place-items:center}
+    .glow{position:absolute;width:260px;height:260px;background:#087dff;filter:blur(95px);opacity:.26}
+    .logo-card{position:relative;width:min(100%,390px);aspect-ratio:1/1;border:1px solid #2a5278;border-radius:32px;background:linear-gradient(145deg,#14243a,#070d17 68%);box-shadow:0 24px 90px #0008,inset 0 0 50px #1aa8ff0d;display:grid;place-items:center;overflow:hidden}
+    .logo-card:before,.logo-card:after{content:"";position:absolute;border:1px solid #21b7ff35;border-radius:50%;width:290px;height:290px}
+    .logo-card:after{width:360px;height:360px}
+    .hero-symbol{font-size:clamp(6rem,14vw,9rem);font-weight:1000;letter-spacing:-.1em;color:transparent;-webkit-text-stroke:2px var(--cyan);filter:drop-shadow(0 0 22px #21b7ff80);z-index:1}
+    .hero-caption{position:absolute;bottom:28px;text-align:center;letter-spacing:.24em;font-size:.72rem;font-weight:900;color:#b8eaff}
+    section{padding:70px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;line-height:1.1;margin:0 0 10px}
+    .sub{margin:0;color:var(--muted);max-width:650px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .panel{background:linear-gradient(145deg,#101b2c,#0a111d);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .sample{aspect-ratio:4/3;border-radius:15px;background:radial-gradient(circle at 50% 35%,#164c78,#0a1422 67%);border:1px solid #254565;display:grid;place-items:center;position:relative;overflow:hidden;margin-bottom:17px}
+    .sample img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1}
+    .panel h3{margin:0 0 6px;font-size:1.12rem}
+    .panel p{margin:0;color:var(--muted);font-size:.94rem}
+    .notice{font-size:.82rem;color:#8196ae;margin-top:17px}
+    .price{font-size:2.2rem;font-weight:950;letter-spacing:-.05em;margin:12px 0 2px}
+    .price span{font-size:.85rem;color:var(--muted);font-weight:500;letter-spacing:0}
+    .tag{display:inline-block;color:var(--cyan);background:#0c263c;border:1px solid #1d557b;padding:5px 9px;border-radius:999px;font-size:.74rem;font-weight:800}
+    .panel ul{padding-left:19px;color:var(--muted);font-size:.92rem;min-height:110px}
+    .panel li{margin:6px 0}
+    .featured{border-color:#1689cf;box-shadow:0 0 36px #078cff12}
+    .featured .btn{width:100%}
+    .pricing-grid .btn{width:100%;margin-top:6px}
+    .order-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start}
+    .order-aside{background:linear-gradient(150deg,#0d2238,#0a111d);border:1px solid #1d496d;border-radius:var(--radius);padding:26px}
+    .order-aside h3{margin-top:0;font-size:1.4rem}
+    .order-aside p,.order-aside li{color:var(--muted)}
+    form{display:grid;gap:14px}
+    .field{display:grid;gap:7px}
+    label{font-weight:750;font-size:.9rem}
+    input,select,textarea{width:100%;border:1px solid #29435f;background:#080f1a;color:var(--text);border-radius:11px;padding:12px 13px;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #21b7ff18}
+    textarea{resize:vertical;min-height:110px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-help{font-size:.8rem;color:#8297af;margin:0}
+    .form-result{display:none;padding:13px;border-radius:12px;border:1px solid #23648a;background:#0b2335;color:#dff7ff;overflow-wrap:anywhere;white-space:pre-wrap}
+    .contact-strip{border:1px solid #204968;background:linear-gradient(100deg,#0d1b2d,#0b1421);border-radius:var(--radius);padding:26px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    footer{padding:28px 0 40px;border-top:1px solid #ffffff12;color:#7f91a7;font-size:.86rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .instagram-button{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);color:white;padding:14px 22px;border-radius:12px;font-weight:bold}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:64px}.hero-art{min-height:280px}.logo-card{max-width:310px}.grid{grid-template-columns:1fr 1fr}.order-layout{grid-template-columns:1fr}.links{gap:12px}.nav-cta{display:none}}
+    @media(max-width:560px){.links a:not(.nav-order){display:none}.grid{grid-template-columns:1fr}.section-head{display:block}.two{grid-template-columns:1fr}.contact-strip{display:block}.contact-strip .btn{margin-top:12px;width:100%}section{padding:54px 0}.hero{padding-bottom:48px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Logo Master home"><span class="mark">LM</span><span>LOGO MASTER</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#order">Order</a>
+        <a class="btn nav-cta" href="#order">Get a Logo ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow"><span>✦</span> Custom design studio</div>
+        <h1>Want a cool logo?<br><em>We got you.</em></h1>
+        <p class="lead">Make your idea stand out. Logo Master creates bold, custom logo concepts for creators, teams, small businesses, and new brands.</p>
+        <div class="hero-actions"><a class="btn" href="#order">Order Your Logo <span>↗</span></a><a class="btn secondary" href="#portfolio">Explore Designs</a></div>
+        <p class="small-note">Creative ideas. Clean designs. Made for your brand.</p>
+      </div>
+      <div class="hero-art" aria-label="Logo Master neon blue logo artwork">
+        <div class="glow"></div><div class="logo-card"><div class="hero-symbol">LM</div><div class="hero-caption">MAKE YOUR MARK</div></div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Selected designs</div><h2 style="margin-top:14px">Made to stand out.</h2><p class="sub">Explore a few Logo Master design examples. Choose a package below to get started.</p></div></div>
+        <div class="grid">
+          <article class="panel"><div class="sample"><img src="logo_master_basic.png" alt="Basic Logo design" loading="lazy"></div><h3>Basic Logo</h3><p>Clean, simple, and professional.</p></article>
+          <article class="panel"><div class="sample"><img src="logo_master_standard.png" alt="Standard Logo design" loading="lazy"></div><h3>Standard Logo</h3><p>Modern style with custom details.</p></article>
+          <article class="panel"><div class="sample"><img src="logo_master_premium.png" alt="Premium Logo design" loading="lazy"></div><h3>Premium Logo</h3><p>High-impact, premium visual design.</p></article>
+        </div>
+        <p class="notice">If an image does not appear, check that its PNG file is uploaded beside index.html and that the filename matches exactly.</p>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Simple packages</div><h2 style="margin-top:14px">Pick your level.</h2><p class="sub">Starter prices are examples in Philippine pesos. Adjust them to match your service before publishing.</p></div></div>
+        <div class="grid pricing-grid">
+          <article class="panel"><span class="tag">BASIC</span><h3 style="margin-top:14px">Basic Logo</h3><div class="price">₱99 <span>/ starting at</span></div><p>Simple and clean.</p><ul><li>One logo concept</li><li>One minor revision</li><li>PNG delivery</li></ul><a class="btn secondary" href="#order" data-package="Basic Logo">Choose Basic</a></article>
+          <article class="panel featured"><span class="tag">STANDARD</span><h3 style="margin-top:14px">Standard Logo</h3><div class="price">₱149 <span>/ starting at</span></div><p>More room to customize.</p><ul><li>Two concept directions</li><li>Up to two revisions</li><li>PNG delivery</li><li>Transparent background if supported</li></ul><a class="btn" href="#order" data-package="Standard Logo">Choose Standard</a></article>
+          <article class="panel"><span class="tag">PREMIUM</span><h3 style="margin-top:14px">Premium Brand Pack</h3><div class="price">₱299 <span>/ starting at</span></div><p>A coordinated visual set.</p><ul><li>One main logo concept</li><li>Social profile version</li><li>Up to three revisions</li><li>PNG delivery</li></ul><a class="btn secondary" href="#order" data-package="Premium Brand Pack">Choose Premium</a></article>
+        </div>
+        <p class="notice">Confirm the final price and delivery time with each customer before starting work. Only promise features you can provide.</p>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Let's create</div><h2 style="margin-top:14px">Start your order.</h2><p class="sub">Tell us what you need. This form prepares an order message you can copy and send through Instagram.</p></div></div>
+        <div class="order-layout">
+          <aside class="order-aside"><h3>Have an idea?</h3><p>Share a few details and we can turn your direction into a logo concept.</p><ul><li>Tell us your brand or team name.</li><li>Choose a style and package.</li><li>Describe colors, symbols, or references.</li></ul><a class="instagram-button" id="instagramLink" href="https://www.instagram.com/logmaster.ph/" target="_blank" rel="noopener noreferrer">📸 Follow Logo Master on Instagram</a><p class="notice">Use Instagram to contact us about your order.</p></aside>
+          <div class="panel">
+            <form id="orderForm">
+              <div class="two"><div class="field"><label for="customer">Your name *</label><input id="customer" name="customer" required placeholder="Your name"></div><div class="field"><label for="brandName">Brand / team name *</label><input id="brandName" name="brandName" required placeholder="Name to put on the logo"></div></div>
+              <div class="two"><div class="field"><label for="package">Package *</label><select id="package" name="package" required><option value="">Choose a package</option><option>Basic Logo — ₱99</option><option>Standard Logo — ₱149</option><option>Premium Brand Pack — ₱299</option><option>Custom request — discuss price</option></select></div><div class="field"><label for="style">Design style</label><select id="style" name="style"><option>Neon / futuristic</option><option>Minimal / clean</option><option>Gaming / esports</option><option>Automotive / sport</option><option>Cartoon / mascot</option><option>Other / open to ideas</option></select></div></div>
+              <div class="field"><label for="colors">Preferred colors</label><input id="colors" name="colors" placeholder="e.g. blue, black, white"></div>
+              <div class="field"><label for="details">Describe your idea *</label><textarea id="details" name="details" required placeholder="What should the logo include? Any symbols, mood, or inspiration?"></textarea></div>
+              <div class="field"><label for="deadline">Preferred deadline (optional)</label><input id="deadline" name="deadline" placeholder="e.g. No rush / next Friday"></div>
+              <button class="btn" type="submit">Prepare Order Message ↗</button>
+              <p class="form-help">This prototype does not store or submit your information to a server. It creates a message on your device.</p>
+              <div class="form-result" id="formResult" role="status" aria-live="polite"></div>
+              <button class="btn secondary" id="copyButton" type="button" style="display:none">Copy Order Message</button>
+              <a class="btn" id="sendInstagram" href="https://www.instagram.com/logmaster.ph/" target="_blank" rel="noopener noreferrer" style="display:none">Open Instagram to Send ↗</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap"><div class="contact-strip"><div><h2 style="font-size:1.8rem">Ready to make your mark?</h2><p class="sub">Your next logo starts with one message.</p></div><a class="btn" href="#order">Let's Build Your Logo ↗</a></div></section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><div class="brand"><span class="mark">LM</span><span>LOGO MASTER</span></div><div>© <span id="year"></span> Logo Master. Made for bold ideas.</div><div>Want a cool logo? We got you.</div></div></footer>
+
+  <script>
+    const INSTAGRAM_URL = "https://www.instagram.com/logmaster.ph/";
+    const form = document.getElementById("orderForm");
+    const result = document.getElementById("formResult");
+    const copyButton = document.getElementById("copyButton");
+    const sendInstagram = document.getElementById("sendInstagram");
+    let orderMessage = "";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll("[data-package]").forEach(button => {
+      button.addEventListener("click", () => {
+        const chosen = button.dataset.package;
+        const select = document.getElementById("package");
+        if (chosen === "Basic Logo") select.value = "Basic Logo — ₱99";
+        if (chosen === "Standard Logo") select.value = "Standard Logo — ₱149";
+        if (chosen === "Premium Brand Pack") select.value = "Premium Brand Pack — ₱299";
+      });
+    });
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const data = new FormData(form);
+      orderMessage = `LOGO MASTER — NEW ORDER REQUEST\nName: ${data.get("customer")}\nBrand/team name: ${data.get("brandName")}\nPackage: ${data.get("package")}\nStyle: ${data.get("style")}\nColors: ${data.get("colors") || "Not specified"}\nIdea/details: ${data.get("details")}\nPreferred deadline: ${data.get("deadline") || "Not specified"}\n\nPlease confirm the final price, delivery time, and details before starting.`;
+      result.style.display = "block";
+      result.textContent = orderMessage;
+      copyButton.style.display = "inline-flex";
+      sendInstagram.style.display = "inline-flex";
+      sendInstagram.href = INSTAGRAM_URL;
+    });
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(orderMessage);
+        copyButton.textContent = "Copied! ✓";
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(result);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyButton.textContent = "Select message above to copy";
+      }
+    });
+  </script>
+</body>
+</html>
